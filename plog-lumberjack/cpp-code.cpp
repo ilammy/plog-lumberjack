@@ -12,9 +12,11 @@
 #include <plog/Appenders/ConsoleAppender.h>
 #include <plog/Formatters/TxtFormatter.h>
 
+#include "DDLogAppender.h"
+
 void cpp_code_main()
 {
-    plog::init(plog::debug, new plog::ConsoleAppender<plog::TxtFormatter>());
+    plog::init(plog::debug, new DDLogAppender());
 
     LOG_INFO << "Hello, plog!";
 }
