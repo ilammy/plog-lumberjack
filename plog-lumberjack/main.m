@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        [DDLog addLogger:[DDTTYLogger sharedInstance]];
+
+        DDLogInfo(@"Hello, world!");
     }
     return 0;
 }
