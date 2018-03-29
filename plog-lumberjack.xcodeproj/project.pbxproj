@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F474403206D92D300AECB7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F474402206D92D300AECB7F /* main.m */; };
+		9F47440B206D9CB500AECB7F /* cpp-code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F474409206D9CB500AECB7F /* cpp-code.cpp */; };
 		CFB43C47F9B758A2A9DBF692 /* libPods-plog-lumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF676B58D6E5D89260A242E /* libPods-plog-lumberjack.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		2DEEB095022960569028DB6E /* Pods-plog-lumberjack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plog-lumberjack.release.xcconfig"; path = "Pods/Target Support Files/Pods-plog-lumberjack/Pods-plog-lumberjack.release.xcconfig"; sourceTree = "<group>"; };
 		9F4743FF206D92D300AECB7F /* plog-lumberjack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "plog-lumberjack"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F474402206D92D300AECB7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F474409206D9CB500AECB7F /* cpp-code.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "cpp-code.cpp"; sourceTree = "<group>"; };
+		9F47440A206D9CB500AECB7F /* cpp-code.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "cpp-code.hpp"; sourceTree = "<group>"; };
 		A5E0CF5A3FC11F1B71D6688D /* Pods-plog-lumberjack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plog-lumberjack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plog-lumberjack/Pods-plog-lumberjack.debug.xcconfig"; sourceTree = "<group>"; };
 		BBF676B58D6E5D89260A242E /* libPods-plog-lumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-plog-lumberjack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				9F474402206D92D300AECB7F /* main.m */,
+				9F474409206D9CB500AECB7F /* cpp-code.cpp */,
+				9F47440A206D9CB500AECB7F /* cpp-code.hpp */,
 			);
 			path = "plog-lumberjack";
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F47440B206D9CB500AECB7F /* cpp-code.cpp in Sources */,
 				9F474403206D92D300AECB7F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +302,12 @@
 			baseConfigurationReference = A5E0CF5A3FC11F1B71D6688D /* Pods-plog-lumberjack.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${SRCROOT}/3rdParty/plog/include\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -305,6 +317,12 @@
 			baseConfigurationReference = 2DEEB095022960569028DB6E /* Pods-plog-lumberjack.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${SRCROOT}/3rdParty/plog/include\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

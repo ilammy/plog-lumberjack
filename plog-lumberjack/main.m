@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
+#include "cpp-code.hpp"
+
 static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 int main(int argc, const char * argv[]) {
@@ -16,6 +18,8 @@ int main(int argc, const char * argv[]) {
         [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
         DDLogInfo(@"Hello, world!");
+
+        cpp_code_main();
     }
     return 0;
 }
